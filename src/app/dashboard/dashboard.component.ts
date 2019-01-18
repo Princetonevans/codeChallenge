@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { Patient } from '../models/patient';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  errorMessage: string;
+  patientData: any[] = [];
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getdata().subscribe(
+      data => this.patientData = data,
+      error => this.errorMessage = <any>error);
   }
 
 }
