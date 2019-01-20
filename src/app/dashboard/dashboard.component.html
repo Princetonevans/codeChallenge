@@ -15,28 +15,28 @@
   <div class="row justify-content-center p-2">
 
     <div class="d-flex col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-4 col-one-half-lg-down fade-in-up text-white">
-      <div class="p-2 cardItem w-100 h-100 align-middle">Benefits Verification</div>
-      <div class="p-2 cardItem1">14</div>
+      <div class="p-2 cardItem w-100 h-100">Benefits Verification</div>
+      <span class="p-2 cardItem1 d-flex align-items-center">14</span>
     </div>
 
     <div class="d-flex col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-4 col-one-half-lg-down fade-in-up text-white">
       <div class="p-2 cardItem w-100 h-100">Prior Authorization</div>
-      <div class="p-2 cardItem1">14</div>
+      <span class="p-2 cardItem1 d-flex align-items-center">14</span>
     </div>
 
     <div class="d-flex col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-4 col-one-half-lg-down fade-in-up text-white">
       <div class="p-2 cardItem w-100 h-100">Prescription Referral</div>
-      <div class="p-2 cardItem1">14</div>
+      <span class="p-2 cardItem1 d-flex align-items-center">14</span>
     </div>
 
     <div class="d-flex col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-4 col-one-half-lg-down fade-in-up text-white">
       <span class="p-2 cardItem w-100 h-100 align-text-middle">Pap</span>
-      <div class="p-2 cardItem1">14</div>
+      <span class="p-2 cardItem1 d-flex align-items-center">14</span>
     </div>
 
     <div class="d-flex col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-4 col-one-half-lg-down fade-in-up text-white">
       <span class="p-2 cardItem w-100 h-100 align-text-middle">Copay</span>
-      <div class="p-2 cardItem1">14</div>
+      <span class="p-2 cardItem1 d-flex align-items-center">14</span>
     </div>
 
   </div>
@@ -76,12 +76,12 @@
       </div>
 
       <div class="d-flex col-sm-6 col-md-4 col-lg-3 col-xl mb-4">
-        <div class="services mx-2" style="background-color: purple; height: 25px; width: 50px"></div>
+        <div class="services mx-2" style="background-color: rgb(159, 84, 209); height: 25px; width: 50px"></div>
         <span class="text-nowrap">Prescription Referral</span>
       </div>
 
       <div class="d-flex col-sm-6 col-md-4 col-lg-3 col-xl mb-4">
-        <div class="services mx-2" style="background-color: blue; height: 25px; width: 50px"></div>
+        <div class="services mx-2" style="background-color: rgb(95, 180, 230); height: 25px; width: 50px"></div>
         <span class="text-nowrap">Pap</span>
       </div>
 
@@ -116,6 +116,7 @@
 
   </mat-card>
 
+<!-- Patients -->
   <div class="mt-3">
 
     <mat-card class="my-3 mx-auto w-75" *ngFor="let patient of patientData">
@@ -144,7 +145,7 @@
         </div>
 
         <div class="d-flex col-sm-6 col-md-4 col-lg-4 col-xl w-100" >
-          <span *ngIf="patient.service == 'CoPay'" class="text-nowrap text-white w-100 text-center" style="background-color: purple">CoPay</span>
+          <span *ngIf="patient.service == 'CoPay'" class="text-nowrap text-white w-100 text-center" style="background-color: rgb(159, 84, 209)">CoPay</span>
           <span *ngIf="patient.service == 'BV'" class="text-nowrap text-white w-100 text-center" style="background-color: green">Benefits
             Verification</span>
           <span *ngIf="patient.service == 'PA'" class="text-nowrap text-white w-100 text-center" style="background-color: orange">Prior
@@ -155,6 +156,7 @@
     </mat-card>
   </div>
 
+  <!-- Pagination -->
   <nav aria-label="Page navigation example" class="pb-5">
     <ul class="pagination justify-content-center">
       <li class="page-item"><a class="page-link" href="#">Previous</a></li>
